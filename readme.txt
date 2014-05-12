@@ -9,8 +9,8 @@ Our aim is to solve the payment pain points for eCommerce in India.
 
 Introduction :
 When you Extract the zip file, it has five files
-	- index.html
-	- views.py
+    - index.html
+    - views.py
     - urls.py (contains urls mapped to corresponding views)
     - settings.py (contains settings for Django)
     
@@ -24,8 +24,10 @@ DESCRIPTION :
 Merchant Id is pre-filled with default values which are used in testing mode. 
 			  
 * views.py - In this file, you can set the configuration settings for the integration. You can specify your live merchant id, secret key, test mode here. The kit is by default prefilled with the test credentials.
+    
     This file also contains the function posttomobikwik which recieves the POST request from index.html file, calculates the checksum and sends the parameters to the Mobikwik URL. 
-	This file also handles the response from mobikwik. The function mobikwik_wallet_response will be called at time of response from mobikwik. Please provide redirect url(in index.html) which is the url to this function. This response is received as an XML file with parameters: 
+	
+    This file also handles the response from mobikwik. The function mobikwik_wallet_response will be called at time of response from mobikwik. Please provide redirect url(in index.html) which is the url to this function. This response is received as an XML file with parameters: 
 		1. Status Code: 0 for success, and not 0 for error. 
 		2. Status message: Success or Failure. 
 		3. Order Id
